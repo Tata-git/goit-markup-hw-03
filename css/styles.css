@@ -36,17 +36,21 @@ h1, h2, h3, p {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+}
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: var(--primary-text-color);
   background-color: var(--white-text-color);
 }
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
   outline: 2px solid tomato;
 }
 /*===========COMPONENTS==========*/
@@ -92,7 +96,7 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
 }
-.site-nav .link {
+.site-nav-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -106,6 +110,7 @@ body {
 }
 .site-nav {
   display: flex;
+  align-items: center;
   margin-left: 93px;
 
   font-weight: 500;
@@ -168,7 +173,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  background-color: tomato;
+  /*background-color: tomato;*/
 }
 
 .modal-btn {
@@ -284,13 +289,49 @@ body {
 }
 /*===========END FOOTER==========*/
 /*===========PORTFOLIO==========*/
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio-card-set {
+/*outline: 1px solid tomato;*/
+display: flex;
+flex-wrap: wrap;
 
+margin-left: -30px;
+margin-top: -30px;
+}
+.portfolio-card-set > .item {
+  /*outline: 1px solid teal;*/            
+  flex-basis: calc(100% / 3 - 30px);
+
+  margin-left: 30px;
+  margin-top: 30px;
+}
+/*portfolio filter*/
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  text-align: center; 
+  margin-bottom: 50px;
+}
+.portfolio-filter .item + .item {
+  margin-left: 8px;
+}
 .filter-btn:hover,
 .filter-btn:focus {
   color: var(--white-text-color);
   background: var(--accent-color);
 }
 .filter-btn {
+  /*outline: 1px solid tomato;*/
+  display: inline-block;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+  align-items: center;
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
